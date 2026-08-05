@@ -1,278 +1,217 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vértice RIG — Relações Institucionais e Governamentais</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vértice — Relações Institucionais e Governamentais</title>
+<meta name="description" content="Vértice transforma ambientes complexos — políticos, regulatórios e reputacionais — em estratégia institucional clara.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <div class="nav-logo">Vértice <span>RIG</span></div>
-    <ul class="nav-links">
-      <li><a href="#quem-somos">Quem Somos</a></li>
-      <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#equipe">Equipe</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
 
-  <section id="hero">
-    <div class="hero-inner">
-      <div class="hero-eyebrow">Relações Institucionais e Governamentais</div>
-      <h1 class="hero-title">
-        O diálogo certo,<br />
-        no <em>momento certo</em>.
-      </h1>
-      <p class="hero-sub">
-        Construímos pontes entre organizações e o poder público, com estratégia,
-        ética e profundo conhecimento do ambiente político-institucional brasileiro.
-      </p>
-      <a href="#contato" class="btn-primary">Fale com a equipe</a>
-    </div>
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-      <span>Explorar</span>
-    </div>
-  </section>
+<nav class="nav" id="mainNav">
+  <a href="#top" class="nav__mark">Vértice <span class="tag">RIG</span></a>
+  <div class="nav__links">
+    <a href="#quemsomos">Quem Somos</a>
+    <a href="#metodo">Método</a>
+    <a href="#atuacao">Atuação</a>
+    <a href="#equipe">Equipe</a>
+    <a href="#contato" class="nav__cta">Contato</a>
+  </div>
+  <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</nav>
 
-  <section id="quem-somos">
-    <div class="quem-grid">
-      <div class="quem-left">
-        <div class="section-label">Quem Somos</div>
-        <h2 class="section-title">Experiência que abre portas</h2>
-        <div class="gold-rule"></div>
-        <p class="quem-text">
-          A Vértice RIG é uma consultoria especializada em Relações Institucionais e Governamentais,
-          fundada por profissionais com décadas de atuação nos ambientes legislativo, executivo e
-          regulatório do Brasil.
-        </p>
-        <p class="quem-text">
-          Atuamos como elo estratégico entre empresas, associações e entidades do terceiro setor
-          e as esferas de poder que definem o ambiente de negócios. Nosso diferencial está na
-          combinação de inteligência política, rede de relacionamentos sólida e absoluto compromisso
-          com a transparência.
-        </p>
-        <p class="quem-text">
-          Entendemos que cada cliente tem demandas únicas. Por isso, desenvolvemos abordagens
-          customizadas, orientadas por dados e pela visão de longo prazo.
-        </p>
+<div class="nav__mobile" id="navMobile">
+  <button class="nav__close" id="navClose">Fechar ✕</button>
+  <a href="#quemsomos">Quem Somos</a>
+  <a href="#metodo">Método</a>
+  <a href="#atuacao">Atuação</a>
+  <a href="#equipe">Equipe</a>
+  <a href="#contato">Contato</a>
+</div>
+
+<header class="hero" id="top">
+  <svg class="hero__map" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g stroke="#C9A66B" stroke-width="1" fill="none">
+      <line x1="120" y1="140" x2="380" y2="260"/>
+      <line x1="380" y1="260" x2="640" y2="120"/>
+      <line x1="640" y1="120" x2="920" y2="220"/>
+      <line x1="380" y1="260" x2="520" y2="480"/>
+      <line x1="920" y1="220" x2="1080" y2="420"/>
+      <line x1="520" y1="480" x2="820" y2="560"/>
+      <line x1="820" y1="560" x2="1080" y2="420"/>
+      <line x1="120" y1="140" x2="240" y2="420"/>
+      <line x1="240" y1="420" x2="520" y2="480"/>
+    </g>
+    <g fill="#C9A66B">
+      <circle cx="120" cy="140" r="3"/><circle cx="380" cy="260" r="3"/><circle cx="640" cy="120" r="3"/>
+      <circle cx="920" cy="220" r="3"/><circle cx="520" cy="480" r="3"/><circle cx="1080" cy="420" r="3"/>
+      <circle cx="820" cy="560" r="3"/><circle cx="240" cy="420" r="3"/>
+    </g>
+  </svg>
+  <div class="wrap hero__inner">
+    <p class="hero__eyebrow reveal is-visible">Relações Institucionais e Governamentais</p>
+    <h1 class="reveal is-visible">Inteligência que <em>antecede</em> a decisão.</h1>
+    <p class="hero__sub reveal is-visible">Transformamos ambientes complexos — políticos, regulatórios, reputacionais — em estratégia clara, para organizações que decidem sob pressão e não podem errar o momento.</p>
+    <a href="#contato" class="btn reveal is-visible">Iniciar uma conversa <span class="btn__arrow">→</span></a>
+  </div>
+  <div class="hero__scroll"><span class="ln"></span> Role para continuar</div>
+</header>
+
+<section class="section--paper" id="quemsomos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="num">I.</span> <span class="label">Quem Somos</span></p>
+      <h2>Uma consultoria construída para ambientes complexos.</h2>
+    </div>
+    <div class="split-grid reveal">
+      <div>
+        <p>A Vértice é uma consultoria especializada em Relações Institucionais e Governamentais, formada por profissionais com histórico nos ambientes legislativo, executivo e regulatório. Atuamos como elo entre organizações e as esferas de poder que moldam o ambiente de negócios — com inteligência, ética e visão de longo prazo.</p>
+        <p class="credentials-line">+15 anos de atuação&nbsp; · &nbsp;100+ organizações atendidas&nbsp; · &nbsp;8 setores</p>
       </div>
-      <div class="quem-right">
-        <div class="stat-card">
-          <div class="stat-number">15+</div>
-          <div class="stat-label">Anos de atuação</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">120</div>
-          <div class="stat-label">Clientes atendidos</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">40+</div>
-          <div class="stat-label">Pautas aprovadas</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">8</div>
-          <div class="stat-label">Setores de atuação</div>
-        </div>
+      <div>
+        <p>O ambiente muda mais rápido do que as estruturas de decisão. Regulação, política, reputação e informação pressionam ao mesmo tempo — e decidir bem exige antecipação.</p>
+        <p class="tag-row">Mudanças regulatórias · Riscos reputacionais · Transformações políticas · Pressão institucional</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="servicos">
-    <div class="section-label">Serviços</div>
-    <h2 class="section-title">O que fazemos por você</h2>
-    <div class="gold-rule"></div>
+<section class="section--navy" id="metodo">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="num">II.</span> <span class="label">Como Pensamos</span></p>
+      <h2>Uma forma própria de ler o cenário.</h2>
+      <p class="method-intro">Cada projeto começa antes da estratégia — começa na leitura do ambiente.</p>
+    </div>
+    <div class="method reveal-stagger" id="methodSteps">
+      <div class="method__step"><span class="method__num">I.</span><h3 class="method__title">Compreender</h3><p class="method__desc">Ler o contexto real por trás do aparente.</p></div>
+      <div class="method__step"><span class="method__num">II.</span><h3 class="method__title">Mapear</h3><p class="method__desc">Identificar atores e interesses.</p></div>
+      <div class="method__step"><span class="method__num">III.</span><h3 class="method__title">Analisar</h3><p class="method__desc">Cruzar dados, histórico e sinais.</p></div>
+      <div class="method__step"><span class="method__num">IV.</span><h3 class="method__title">Planejar</h3><p class="method__desc">Transformar leitura em plano de ação.</p></div>
+      <div class="method__step"><span class="method__num">V.</span><h3 class="method__title">Posicionar</h3><p class="method__desc">Definir narrativa e lugar institucional.</p></div>
+      <div class="method__step"><span class="method__num">VI.</span><h3 class="method__title">Influenciar</h3><p class="method__desc">Agir nos canais e momentos certos.</p></div>
+      <div class="method__step"><span class="method__num">VII.</span><h3 class="method__title">Monitorar</h3><p class="method__desc">Acompanhar o cenário continuamente.</p></div>
+    </div>
+  </div>
+</section>
 
-    <div class="servicos-grid">
-      <div class="servico-item">
-        <svg class="servico-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-        </svg>
-        <div class="servico-title">Monitoramento Legislativo</div>
-        <p class="servico-desc">Acompanhamento contínuo de projetos de lei, medidas provisórias e regulamentações em tramitação no Congresso e órgãos reguladores.</p>
+<section class="section--paper" id="atuacao">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="num">III.</span> <span class="label">Áreas de Atuação</span></p>
+      <h2>Quatro pilares, um só raciocínio.</h2>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar">
+        <span class="pillar__num">01</span>
+        <h3>Inteligência</h3>
+        <p>Monitoramento contínuo, análise de dados e mapeamento de atores para transformar informação dispersa em leitura clara do cenário.</p>
+        <p class="pillar__tags">Monitoramento · Análise · Dados · Mapeamento</p>
       </div>
-
-      <div class="servico-item">
-        <svg class="servico-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-        </svg>
-        <div class="servico-title">Articulação Política</div>
-        <p class="servico-desc">Gestão estratégica de relacionamentos com parlamentares, ministérios e agências, construindo alianças e interlocuções de alto nível.</p>
+      <div class="pillar">
+        <span class="pillar__num">02</span>
+        <h3>Estratégia</h3>
+        <p>Advocacy e relacionamento institucional construídos com planejamento — não com urgência.</p>
+        <p class="pillar__tags">Advocacy · Relacionamento Institucional · Planejamento</p>
       </div>
-
-      <div class="servico-item">
-        <svg class="servico-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-        </svg>
-        <div class="servico-title">Advocacia Regulatória</div>
-        <p class="servico-desc">Representação dos interesses do cliente em processos regulatórios, consultas públicas e audiências em agências federais e estaduais.</p>
+      <div class="pillar">
+        <span class="pillar__num">03</span>
+        <h3>Comunicação</h3>
+        <p>Reputação, narrativa e posicionamento tratados como ativos estratégicos — e protegidos como tal.</p>
+        <p class="pillar__tags">Reputação · Narrativa · Posicionamento · Imprensa</p>
       </div>
-
-      <div class="servico-item">
-        <svg class="servico-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
-        </svg>
-        <div class="servico-title">Inteligência Política</div>
-        <p class="servico-desc">Análise do ambiente político, mapeamento de riscos legislativos e cenários prospectivos para tomada de decisão estratégica.</p>
-      </div>
-
-      <div class="servico-item">
-        <svg class="servico-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-        </svg>
-        <div class="servico-title">Gestão de Stakeholders</div>
-        <p class="servico-desc">Mapeamento, engajamento e comunicação estratégica com públicos-chave no setor público, setor privado e sociedade civil.</p>
-      </div>
-
-      <div class="servico-item">
-        <svg class="servico-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-        </svg>
-        <div class="servico-title">Compliance Público</div>
-        <p class="servico-desc">Estruturação de programas de conformidade nas relações com o poder público, alinhados à Lei 12.846/13 e às melhores práticas internacionais.</p>
+      <div class="pillar">
+        <span class="pillar__num">04</span>
+        <h3>Gestão de Riscos</h3>
+        <p>Preparação para crises, riscos regulatórios e políticos, e proteção institucional antes que o cenário exija.</p>
+        <p class="pillar__tags">Crises · Riscos Regulatórios · Riscos Políticos · Proteção</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="equipe">
-    <div class="equipe-intro">
-      <div class="section-label">Equipe</div>
-      <h2 class="section-title">Profissionais que fazem a diferença</h2>
-      <div class="gold-rule"></div>
-      <p>Nossa equipe reúne ex-parlamentares, ex-gestores públicos, advogados e especialistas em políticas públicas. Uma combinação única de visão interna e capacidade técnica.</p>
+<section class="section--navy" id="equipe">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="num">IV.</span> <span class="label">Equipe</span></p>
+      <h2>Quem está à mesa quando a decisão é difícil.</h2>
     </div>
+    <div class="team-grid reveal">
+      <p>A equipe reúne profissionais com histórico em relações governamentais, comunicação estratégica, análise de dados e gestão de crises — construído em diferentes setores e diferentes momentos de pressão institucional. O que une o grupo é uma forma comum de pensar: entender o cenário antes de reagir a ele.</p>
+      <ul class="roster">
+        <li>Amanda Duarte <span>Sócia-fundadora & Estratégia</span></li>
+        <li>Rodrigo Bastos <span>Relações Institucionais</span></li>
+        <li>Beatriz Nogueira <span>Inteligência & Dados</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <div class="equipe-grid">
-      <div class="membro-card">
-        <div class="membro-avatar">
-          <div class="membro-avatar-bg">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
-          </div>
-          <div class="membro-avatar-initials">AM</div>
+<section class="section--paper" id="contato">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-copy reveal">
+        <p class="eyebrow"><span class="num">V.</span> <span class="label">Contato</span></p>
+        <h2 class="contact-title">Iniciar uma conversa estratégica.</h2>
+        <p>Cada relação começa com uma conversa direta sobre o cenário que sua organização enfrenta hoje.</p>
+        <div class="contact-meta">
+          <div><a href="mailto:contato@vertice.com.br">contato@vertice.com.br</a></div>
+          <div>+55 (11) 0000-0000</div>
+          <div>São Paulo, Brasil</div>
         </div>
-        <div class="membro-line"></div>
-        <div class="membro-name">Ana Moreira</div>
-        <div class="membro-role">Sócia-Fundadora & Diretora</div>
-        <p class="membro-bio">Ex-assessora parlamentar com 20 anos de experiência no Congresso Nacional. Especialista em políticas de infraestrutura e energia.</p>
       </div>
-
-      <div class="membro-card">
-        <div class="membro-avatar">
-          <div class="membro-avatar-bg">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+      <div class="reveal">
+        <form id="contactForm">
+          <div class="field">
+            <label for="fname">Nome</label>
+            <input type="text" id="fname" name="fname" required>
           </div>
-          <div class="membro-avatar-initials">RC</div>
-        </div>
-        <div class="membro-line"></div>
-        <div class="membro-name">Ricardo Campos</div>
-        <div class="membro-role">Sócio & Diretor de Estratégia</div>
-        <p class="membro-bio">Ex-secretário estadual de Planejamento. Mestre em Ciência Política pela USP, com foco em regulação e ambiente de negócios.</p>
-      </div>
-
-      <div class="membro-card">
-        <div class="membro-avatar">
-          <div class="membro-avatar-bg">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          <div class="field">
+            <label for="forg">Organização</label>
+            <input type="text" id="forg" name="forg" required>
           </div>
-          <div class="membro-avatar-initials">FL</div>
-        </div>
-        <div class="membro-line"></div>
-        <div class="membro-name">Fernanda Lima</div>
-        <div class="membro-role">Gerente de Relações Institucionais</div>
-        <p class="membro-bio">Especialista em advocacia regulatória e gestão de crises institucionais. Atuação nas agências ANS, ANVISA e ANATEL.</p>
+          <div class="field">
+            <label for="femail">E-mail</label>
+            <input type="email" id="femail" name="femail" required>
+          </div>
+          <div class="field">
+            <label for="fmsg">Mensagem</label>
+            <textarea id="fmsg" name="fmsg" required></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar mensagem <span class="btn__arrow">→</span></button>
+          <p class="form-note">Respondemos em até dois dias úteis.</p>
+        </form>
+        <p class="form-confirm" id="formConfirm">Mensagem recebida. Nossa equipe entrará em contato em breve.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contato">
-    <div class="contato-grid">
-      <div class="contato-left">
-        <div class="section-label">Contato</div>
-        <h2 class="section-title">Vamos conversar</h2>
-        <div class="gold-rule"></div>
-        <p>
-          Seja para entender como podemos apoiar a sua organização ou para discutir um
-          desafio específico no ambiente institucional, nossa equipe está disponível
-          para uma conversa confidencial.
-        </p>
-
-        <div class="contact-items">
-          <div class="contact-item">
-            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-            <div class="contact-text">
-              <strong>E-mail</strong>
-              contato@verticerig.com.br
-            </div>
-          </div>
-          <div class="contact-item">
-            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-            </svg>
-            <div class="contact-text">
-              <strong>Telefone</strong>
-              +55 (61) 3000-0000
-            </div>
-          </div>
-          <div class="contact-item">
-            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-              <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
-            <div class="contact-text">
-              <strong>Endereço</strong>
-              Brasília, DF — Brasil<br />
-              SCS Quadra 01, Bloco A
-            </div>
-          </div>
-        </div>
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <a href="#top" class="footer-mark">Vértice <span class="tag">RIG</span></a>
+      <div class="footer-links">
+        <a href="#quemsomos">Quem Somos</a>
+        <a href="#metodo">Método</a>
+        <a href="#atuacao">Atuação</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#contato">Contato</a>
       </div>
-
-      <form class="contato-form" id="contato-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="nome">Nome</label>
-            <input id="nome" name="nome" type="text" placeholder="Seu nome" required />
-          </div>
-          <div class="form-group">
-            <label for="empresa">Empresa / Organização</label>
-            <input id="empresa" name="empresa" type="text" placeholder="Nome da empresa" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email">E-mail</label>
-          <input id="email" name="email" type="email" placeholder="seu@email.com.br" required />
-        </div>
-        <div class="form-group">
-          <label for="interesse">Área de interesse</label>
-          <select id="interesse" name="interesse" required>
-            <option value="" disabled selected>Selecione um serviço</option>
-            <option>Monitoramento Legislativo</option>
-            <option>Articulação Política</option>
-            <option>Advocacia Regulatória</option>
-            <option>Inteligência Política</option>
-            <option>Gestão de Stakeholders</option>
-            <option>Compliance Público</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" placeholder="Descreva brevemente o seu desafio ou demanda..." required></textarea>
-        </div>
-        <button class="form-submit" type="submit">Enviar mensagem</button>
-        <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
-      </form>
     </div>
-  </section>
+    <div class="footer-bottom">
+      <span>© 2026 Vértice — Relações Institucionais e Governamentais</span>
+      <span>Inteligência · Estratégia · Comunicação · Gestão de Riscos</span>
+    </div>
+  </div>
+</footer>
 
-  <footer>
-    <div class="footer-logo">Vértice <span>RIG</span></div>
-    <div class="footer-copy">© 2025 Vértice RIG. Todos os direitos reservados.</div>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
