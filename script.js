@@ -1,4 +1,55 @@
 const nav = document.getElementById('mainNav');
+const themeToggle = document.getElementById('themeToggle');
+const themeToggleMobile = document.getElementById('themeToggleMobile');
+const logoImages = document.querySelectorAll('[data-logo-light][data-logo-dark]');
+
+function resolveInitialTheme() {
+  const storedTheme = localStorage.getItem('vertice-theme');
+  if (storedTheme === 'dark' || storedTheme === 'light') {
+    return storedTheme;
+  }
+  return 'dark';
+}
+
+function applyTheme(theme) {
+  document.body.setAttribute('data-theme', theme);
+  localStorage.setItem('vertice-theme', theme);
+
+  const isDark = theme === 'dark';
+  const nextLabel = isDark ? 'Alternar para tema claro' : 'Alternar para tema escuro';
+
+  if (themeToggle) {
+    themeToggle.setAttribute('aria-label', nextLabel);
+    themeToggle.setAttribute('title', nextLabel);
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+  }
+  if (themeToggleMobile) {
+    themeToggleMobile.setAttribute('aria-label', nextLabel);
+    themeToggleMobile.setAttribute('title', nextLabel);
+    themeToggleMobile.setAttribute('aria-pressed', String(isDark));
+  }
+
+  logoImages.forEach((image) => {
+    const lightSrc = image.getAttribute('data-logo-light');
+    const darkSrc = image.getAttribute('data-logo-dark');
+    image.setAttribute('src', isDark ? lightSrc : darkSrc);
+  });
+}
+
+function toggleTheme() {
+  const currentTheme = document.body.getAttribute('data-theme') || 'dark';
+  applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+}
+
+applyTheme(resolveInitialTheme());
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', toggleTheme);
+}
+if (themeToggleMobile) {
+  themeToggleMobile.addEventListener('click', toggleTheme);
+}
+
 if (nav) {
   window.addEventListener(
     'scroll',

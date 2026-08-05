@@ -16,13 +16,19 @@
 
 <nav class="nav" id="mainNav">
   <a href="#top" class="nav__mark" aria-label="Vértice">
-    <img src="assets/logo-vertice-light.svg" alt="Vértice" class="brand-logo" />
+    <img src="assets/logo-vertice-light.svg" data-logo-light="assets/logo-vertice-light.svg" data-logo-dark="assets/logo-vertice-dark.svg" alt="Vértice" class="brand-logo" />
   </a>
   <div class="nav__links">
     <a href="#quemsomos">Quem Somos</a>
     <a href="#metodo">Método</a>
     <a href="#atuacao">Atuação</a>
     <a href="#contato" class="nav__cta">Contato</a>
+    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema" aria-pressed="true">
+      <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+      <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+      <span class="theme-toggle__thumb" aria-hidden="true"></span>
+      <span class="theme-toggle__sr">Alternar tema</span>
+    </button>
   </div>
   <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
     <span></span><span></span>
@@ -35,6 +41,12 @@
   <a href="#metodo">Método</a>
   <a href="#atuacao">Atuação</a>
   <a href="#contato">Contato</a>
+  <button type="button" class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="Alternar tema" aria-pressed="true">
+    <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+    <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+    <span class="theme-toggle__thumb" aria-hidden="true"></span>
+    <span class="theme-toggle__sr">Alternar tema</span>
+  </button>
 </div>
 
 <header class="hero" id="top">
@@ -208,7 +220,7 @@
   <div class="wrap">
     <div class="footer-row">
       <a href="#top" class="footer-mark" aria-label="Vértice">
-        <img src="assets/logo-vertice-light.svg" alt="Vértice" class="brand-logo brand-logo--footer" />
+        <img src="assets/logo-vertice-light.svg" data-logo-light="assets/logo-vertice-light.svg" data-logo-dark="assets/logo-vertice-dark.svg" alt="Vértice" class="brand-logo brand-logo--footer" />
       </a>
       <div class="footer-links">
         <a href="#quemsomos">Quem Somos</a>
