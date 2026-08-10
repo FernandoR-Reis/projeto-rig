@@ -133,3 +133,145 @@ if (form && confirmMessage) {
     confirmMessage.classList.add('is-shown');
   });
 }
+
+const addressNavLink = document.getElementById('addressNavLink');
+if (addressNavLink) {
+  addressNavLink.addEventListener('click', (event) => {
+    const addressQuery = 'Rua Conceicao, 233 - Sala 916, Centro - Campinas - SP';
+    const encodedAddress = encodeURIComponent(addressQuery);
+    const wazeUrl = `https://waze.com/ul?q=${encodedAddress}&navigate=yes`;
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (!isMobile) {
+      return;
+    }
+
+    event.preventDefault();
+    const now = Date.now();
+
+    window.location.href = wazeUrl;
+
+    window.setTimeout(() => {
+      // If Waze app did not take over, fallback to Maps in the same tab.
+      if (Date.now() - now < 1600) {
+        window.location.href = mapsUrl;
+      }
+    }, 1100);
+  });
+}
+
+function setupCustomInterestSelect() {
+  const select = document.getElementById('finterest');
+  if (!select || select.dataset.customized === 'true') {
+    return;
+  }
+
+  const field = select.closest('.field');
+  if (!field) {
+    return;
+  }
+
+  field.classList.add('field--interest');
+  select.classList.add('native-select--hidden');
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'custom-select';
+
+  const trigger = document.createElement('button');
+  trigger.type = 'button';
+  trigger.className = 'custom-select__trigger';
+  trigger.setAttribute('aria-haspopup', 'listbox');
+  trigger.setAttribute('aria-expanded', 'false');
+
+  const list = document.createElement('div');
+  list.className = 'custom-select__list';
+  list.setAttribute('role', 'listbox');
+
+  const options = Array.from(select.options);
+  const placeholderOption = options.find((option) => option.value === '') || options[0];
+
+  function updateTriggerLabel() {
+    const selectedOption = select.options[select.selectedIndex];
+    if (!selectedOption || selectedOption.value === '') {
+      trigger.textContent = placeholderOption ? placeholderOption.textContent : 'Selecione um servico';
+      trigger.classList.add('is-placeholder');
+      return;
+    }
+
+    trigger.textContent = selectedOption.textContent;
+    trigger.classList.remove('is-placeholder');
+  }
+
+  function closeList() {
+    wrapper.classList.remove('is-open');
+    trigger.setAttribute('aria-expanded', 'false');
+  }
+
+  function openList() {
+    wrapper.classList.add('is-open');
+    trigger.setAttribute('aria-expanded', 'true');
+  }
+
+  options
+    .filter((option) => option.value !== '')
+    .forEach((option) => {
+      const optionButton = document.createElement('button');
+      optionButton.type = 'button';
+      optionButton.className = 'custom-select__option';
+      optionButton.setAttribute('role', 'option');
+      optionButton.textContent = option.textContent;
+      optionButton.dataset.value = option.value || option.textContent;
+
+      optionButton.addEventListener('click', () => {
+        const target = Array.from(select.options).find(
+          (item) => (item.value || item.textContent) === optionButton.dataset.value
+        );
+
+        if (!target) {
+          return;
+        }
+
+        select.value = target.value;
+        select.dispatchEvent(new Event('change', { bubbles: true }));
+
+        list.querySelectorAll('.custom-select__option').forEach((node) => node.classList.remove('is-selected'));
+        optionButton.classList.add('is-selected');
+
+        updateTriggerLabel();
+        closeList();
+      });
+
+      list.appendChild(optionButton);
+    });
+
+  trigger.addEventListener('click', () => {
+    if (wrapper.classList.contains('is-open')) {
+      closeList();
+      return;
+    }
+    openList();
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!wrapper.contains(event.target)) {
+      closeList();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeList();
+    }
+  });
+
+  updateTriggerLabel();
+
+  wrapper.appendChild(trigger);
+  wrapper.appendChild(list);
+  field.appendChild(wrapper);
+
+  select.dataset.customized = 'true';
+}
+
+setupCustomInterestSelect();
