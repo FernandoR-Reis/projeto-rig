@@ -10,25 +10,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260809e">
+<link rel="stylesheet" href="style.css?v=20260811e">
 </head>
 <body>
 
 <nav class="nav" id="mainNav">
-  <a href="#top" class="nav__mark" aria-label="Vértice">
+  <a href="#quem-somos" class="nav__mark" aria-label="Vértice">
     <img src="assets/logo-vertice-light.svg?v=20260809" data-logo-light="assets/logo-vertice-light.svg?v=20260809" data-logo-dark="assets/logo-vertice-dark.svg?v=20260809" alt="Vértice" class="brand-logo" />
   </a>
   <div class="nav__links">
-    <a href="#quemsomos">Quem Somos</a>
-    <a href="#metodo">Método</a>
-    <a href="#atuacao">Atuação</a>
-    <a href="#contato" class="nav__cta">Contato</a>
-    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema" aria-pressed="true">
-      <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
-      <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
-      <span class="theme-toggle__thumb" aria-hidden="true"></span>
-      <span class="theme-toggle__sr">Alternar tema</span>
-    </button>
+    <a href="#quem-somos">Quem Somos</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
   </div>
   <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
     <span></span><span></span>
@@ -37,20 +30,13 @@
 
 <div class="nav__mobile" id="navMobile">
   <button class="nav__close" id="navClose">Fechar ✕</button>
-  <a href="#quemsomos">Quem Somos</a>
-  <a href="#metodo">Método</a>
-  <a href="#atuacao">Atuação</a>
+  <a href="#quem-somos">Quem Somos</a>
+  <a href="#servicos">Serviços</a>
   <a href="#contato">Contato</a>
-  <button type="button" class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="Alternar tema" aria-pressed="true">
-    <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
-    <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
-    <span class="theme-toggle__thumb" aria-hidden="true"></span>
-    <span class="theme-toggle__sr">Alternar tema</span>
-  </button>
 </div>
 
-<header class="hero" id="top">
-  <svg class="hero__map" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<section class="section--navy section--intro" id="quem-somos">
+  <svg class="intro__map" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <g stroke="#C9A66B" stroke-width="1" fill="none">
       <line x1="120" y1="140" x2="380" y2="260"/>
       <line x1="380" y1="260" x2="640" y2="120"/>
@@ -68,33 +54,18 @@
       <circle cx="820" cy="560" r="3"/><circle cx="240" cy="420" r="3"/>
     </g>
   </svg>
-  <div class="wrap hero__inner">
-    <p class="hero__eyebrow reveal is-visible">Relações Institucionais e Governamentais</p>
-    <h1 class="reveal is-visible">Inteligência que <em>antecede</em> a decisão.</h1>
-    <p class="hero__sub reveal is-visible">Transformamos ambientes complexos — políticos, regulatórios, reputacionais — em estratégia clara, para organizações que decidem sob pressão e não podem errar o momento.</p>
-    <a href="#contato" class="btn reveal is-visible">Iniciar uma conversa <span class="btn__arrow">→</span></a>
-  </div>
-  <div class="hero__scroll"><span class="ln"></span> Role para continuar</div>
-</header>
-
-<section class="section--paper" id="quemsomos">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow"><span class="num">I.</span> <span class="label">Quem Somos</span></p>
-      <h2>Convergência | Conexão | Elevação </h2>
+      <p class="eyebrow"><span class="label">Quem Somos</span></p>
+      <h1>Inteligência que <em>antecede</em><br>a decisão.</h1>
     </div>
-    <div class="split-grid reveal">
-      <div>
-        <p>A Vértice é especialista em comunicação estratégica, criação de narrativas inteligentes e construção de relacionamentos sustentáveis com diferentes stakeholders.</p>
-      </div>
-      <div>
-        <p>Colaboramos com nossos clientes durante todo o processo de tomada de decisão, identificando oportunidades e olhando para o mercado sempre pelo lado de dentro.</p>
-      </div>
+    <div class="intro-copy reveal">
+      <p>A Vértice é especialista em comunicação estratégica, criação de narrativas inteligentes e construção de relacionamentos sustentáveis com diferentes stakeholders. Colaboramos com nossos clientes durante todo o processo de tomada de decisão, identificando oportunidades e olhando para o mercado sempre pelo lado de dentro.</p>
     </div>
   </div>
 </section>
 
-<section class="section--navy" id="metodo">
+<section class="section--navy" id="metodo" hidden aria-hidden="true">
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow"><span class="num">II.</span> <span class="label">Como Pensamos</span></p>
@@ -113,55 +84,36 @@
   </div>
 </section>
 
-<section class="section--paper" id="atuacao">
+<section class="section--paper" id="servicos">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow"><span class="num">III.</span> <span class="label">Serviços</span></p>
-      <h2>Atuação estratégica para decisões críticas.</h2>
+      <h2>Serviços</h2>
     </div>
-    <div class="pillars reveal">
-      <div class="pillar">
-        <span class="pillar__num">01</span>
-        <h3>Mapeamento e Monitoramento de Issues</h3>
-        <p>Oferecemos monitoramento em tempo real com identificação e análise de temas gerais e críticos, positivos ou negativos, orientando os próximos passos e a melhor abordagem para apoiar a tomada de decisão.</p>
-        <p>Além disso, enviamos alertas, elaboramos relatórios analíticos e realizamos reuniões de aconselhamento sobre as principais movimentações relacionadas aos ambientes Institucional, Governamental, Imprensa e Sociedade Civil.</p>
-      </div>
-      <div class="pillar">
-        <span class="pillar__num">02</span>
-        <h3>Estratégias de Comunicação</h3>
-        <p>Ajudamos nossos clientes a estruturar a forma como analisam problemas, tomam decisões e questionam cenários com lucidez e rigor.</p>
-        <p>Desenvolvemos posicionamento de marca por meio de narrativas estratégicas e mensagens consistentes para diferentes públicos de interesse.</p>
-        <p>Com uma abordagem personalizada e orientada para resultados, entregamos diagnósticos, estratégias e planos de ação capazes de preparar organizações para diferentes contextos e desafios.</p>
-        <p>Nossa atuação em comunicação digital é sustentada por uma metodologia própria de Design Reputacional, envolvendo:</p>
-        <ul class="pillar-list">
-          <li>Content Marketing</li>
-          <li>Storytelling</li>
-          <li>Marketing de Influência</li>
-          <li>Inteligência Digital</li>
-          <li>Performance Digital</li>
-        </ul>
-      </div>
-      <div class="pillar">
-        <span class="pillar__num">03</span>
-        <h3>Gestão de Stakeholders</h3>
-        <p>Realizamos o mapeamento dos principais atores públicos e privados envolvidos nas pautas estratégicas do cliente.</p>
-        <p>Esses stakeholders são classificados conforme critérios definidos conjuntamente com cada organização.</p>
-        <p>Também oferecemos suporte para defesa de interesses, relacionamento institucional e ações de representação direta ou por coalizões.</p>
-      </div>
-      <div class="pillar">
-        <span class="pillar__num">04</span>
-        <h3>Gestão de Imagem e Crise</h3>
-        <p>Desenvolvemos estratégias para fortalecimento da reputação e proteção da imagem institucional.</p>
-        <p>Nossa atuação contempla:</p>
-        <ul class="pillar-list">
-          <li>Comitês de crise</li>
-          <li>Salas de crise 24/7</li>
-          <li>Treinamento de porta-vozes</li>
-          <li>Gestão de narrativas</li>
-          <li>Monitoramento contínuo</li>
-        </ul>
-        <p>Utilizamos metodologias de análise de riscos, classificação de stakeholders e inteligência artificial para antecipar cenários e estruturar planos de ação que reduzam impactos reputacionais.</p>
-      </div>
+    <div class="services-grid reveal">
+      <article class="service-block">
+        <h3>Mapeamento de Issues</h3>
+        <p>Análise e identificação de temas gerais e críticos, positivos e negativos, e gerenciamento de issues de curto, médio e longo prazo.</p>
+      </article>
+      <article class="service-block">
+        <h3>Formulação de Estratégias</h3>
+        <p>Formulação de estratégia em relações governamentais e apoio com abordagem governamental e regulatória na prevenção e gerenciamento de crises e imagem.</p>
+      </article>
+      <article class="service-block">
+        <h3>Engajamento com Stakeholders</h3>
+        <p>Trabalho estratégico para engajamento com stakeholders, para defesa de interesses ou brand awareness e suporte para ação de representação direta, associativa ou por coalizão.</p>
+      </article>
+      <article class="service-block">
+        <h3>Treinamento para Engajamento</h3>
+        <p>Trabalho de preparação para reuniões com autoridades públicas, participação em audiências públicas, CPIs e suporte para ação de representação direta, associativa ou por coalizão.</p>
+      </article>
+      <article class="service-block">
+        <h3>Campanhas de Public Affairs</h3>
+        <p>Atuação com elementos de comunicação, publicidade e assessoria de imprensa, para convencimento não apenas de tomadores de decisão, mas também de formadores de opinião de forma mais ampla.</p>
+      </article>
+      <article class="service-block">
+        <h3>Estruturação de Áreas</h3>
+        <p>Estruturação e reestruturação de áreas corporativas de Relações Institucionais e/ou Governamentais.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -170,7 +122,7 @@
   <div class="wrap">
     <div class="contact-grid">
       <div class="contact-copy reveal">
-        <p class="eyebrow"><span class="num">IV.</span> <span class="label">Contato</span></p>
+        <p class="eyebrow"><span class="label">Contato</span></p>
         <h2 class="contact-title">Vamos conversar</h2>
         <p>Seja para entender como podemos apoiar a sua organização ou para discutir um desafio específico, nossa equipe está disponível para uma conversa confidencial.</p>
         <div class="contact-meta">
@@ -218,10 +170,12 @@
             <label for="finterest">Área de interesse</label>
             <select id="finterest" name="finterest" required>
               <option value="" disabled selected>Selecione um serviço</option>
-              <option>Mapeamento e Monitoramento de Issues</option>
-              <option>Estratégias de Comunicação</option>
-              <option>Gestão de Stakeholders</option>
-              <option>Gestão de Imagem e Crise</option>
+              <option>Mapeamento de Issues</option>
+              <option>Formulação de Estratégias</option>
+              <option>Engajamento com Stakeholders</option>
+              <option>Treinamento para Engajamento</option>
+              <option>Campanhas de Public Affairs</option>
+              <option>Estruturação de Áreas</option>
             </select>
           </div>
           <div class="field">
@@ -240,23 +194,25 @@
 <footer>
   <div class="wrap">
     <div class="footer-row">
-      <a href="#top" class="footer-mark" aria-label="Vértice">
+      <button type="button" class="footer-mark footer-theme-toggle" id="footerThemeToggle" aria-label="Alternar tema" aria-pressed="true" title="Alternar tema">
         <img src="assets/logo-vertice-light.svg?v=20260809" data-logo-light="assets/logo-vertice-light.svg?v=20260809" data-logo-dark="assets/logo-vertice-dark.svg?v=20260809" alt="Vértice" class="brand-logo brand-logo--footer" />
-      </a>
+      </button>
       <div class="footer-links">
-        <a href="#quemsomos">Quem Somos</a>
-        <a href="#metodo">Método</a>
-        <a href="#atuacao">Atuação</a>
+        <a href="#quem-somos">Quem Somos</a>
+        <a href="#servicos">Serviços</a>
         <a href="#contato">Contato</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Vértice — Relações Institucionais e Governamentais</span>
-      <span>Inteligência · Estratégia · Comunicação · Gestão de Riscos</span>
+      <div class="footer-bottom-main">
+        <span>© 2026 Vértice — Relações Institucionais e Governamentais</span>
+        <span>Inteligência · Estratégia · Comunicação · Gestão de Riscos</span>
+      </div>
+      <a class="footer-credit" href="https://fernandor-reis.github.io/portfolio-fernando-reis/" target="_blank" rel="noopener noreferrer">Criado por Fernando</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=20260809d"></script>
+<script src="script.js?v=20260811d"></script>
 </body>
 </html>

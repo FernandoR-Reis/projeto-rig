@@ -21,6 +21,12 @@ Acesse:
 
 - `http://localhost:8000`
 
+## Produção
+
+Domínio atual publicado:
+
+- `https://fernandor-reis.github.io/projeto-rig/`
+
 ## Publicação
 
 Este projeto é estático e pode ser publicado em qualquer hosting de arquivos estáticos (GitHub Pages, Netlify, Vercel, Cloudflare Pages, etc.).

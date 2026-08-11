@@ -1,6 +1,7 @@
 const nav = document.getElementById('mainNav');
 const themeToggle = document.getElementById('themeToggle');
 const themeToggleMobile = document.getElementById('themeToggleMobile');
+const footerThemeToggle = document.getElementById('footerThemeToggle');
 const logoImages = document.querySelectorAll('[data-logo-light][data-logo-dark]');
 
 function resolveInitialTheme() {
@@ -28,6 +29,11 @@ function applyTheme(theme) {
     themeToggleMobile.setAttribute('title', nextLabel);
     themeToggleMobile.setAttribute('aria-pressed', String(isDark));
   }
+  if (footerThemeToggle) {
+    footerThemeToggle.setAttribute('aria-label', nextLabel);
+    footerThemeToggle.setAttribute('title', nextLabel);
+    footerThemeToggle.setAttribute('aria-pressed', String(isDark));
+  }
 
   logoImages.forEach((image) => {
     const lightSrc = image.getAttribute('data-logo-light');
@@ -48,6 +54,9 @@ if (themeToggle) {
 }
 if (themeToggleMobile) {
   themeToggleMobile.addEventListener('click', toggleTheme);
+}
+if (footerThemeToggle) {
+  footerThemeToggle.addEventListener('click', toggleTheme);
 }
 
 if (nav) {
